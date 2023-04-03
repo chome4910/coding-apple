@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            background-color: salmon;
+            width: 300px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="alert">
+        <p id="text" class='text2'>알림창임</p>
+        <button class='text2' onclick="clicksButton3('닫기','none')">닫기</button>
+
+    </div>
+
+    <button onclick="clicksButton3('아이디를 입력하세요','block')">버튼1</button>
+    <button onclick="clicksButton3('비밀번호를 입력하세요','block')">버튼2</button>
+
+    <script>
+        document.getElementById('alert').addEventListener('click',function(){
+            document.getElementById('alert').style.display = 'none'
+        });
+
+        /*
+        function clicksButton3(text,openClose){
+            document.getElementById('alert').innerHTML = text
+            document.getElementById('alert').style.display = openClose
+        }
+        */
+
+        //첫번째 셀렉터 getElementsByClassName
+        
+        function clicksButton1(){
+            document.getElementsByClassName('text2')[0].innerHTML = '아이디를 입력하세요'
+            document.getElementsByClassName('text2')[0].style.display = 'block'
+        }
+
+        function clicksButton2(){
+            document.getElementsByClassName('text2')[0].innerHTML = '비밀번호를 입력하세요'
+            document.getElementsByClassName('text2')[0].style.display = 'block'
+        }
+        
+        
+
+        //두번째 셀렉터 getElementById
+        /*
+        function clicksButton1(){
+            document.getElementById('text').innerHTML = '아이디를 입력하세요'
+            document.getElementById('text').style.display = 'block'
+        }
+
+        function clicksButton2(){
+            document.getElementById('text').innerHTML = '비밀번호를 입력하세요'
+            document.getElementById('text').style.display = 'block'
+        }
+        */
+
+        //세번째 셀렉터 getElementsByTagName
+        //잘 사용안함
+
+        
+    </script>
+</body>
+</html>

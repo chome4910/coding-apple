@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <div class="alert-box" id="alert">
+        <p id="title">알림창임</p>
+        <button id="close">닫기</button>
+    </div>
+
+    <button onclick='아이디알림창("아이디 입력해주세요","block")'>버튼</button>
+    <button onclick='아이디알림창("비밀번호 입력해주세요","block")'>버튼</button>
+
+    <script>
+
+        // 1.p태그 내용을 아이디입력으로 바꿈
+            //document.getElementById('title').innerHTML ="아이디 입력해주세요"
+        // 2. 띄움
+            //document.getElementById('alert').style.display ="block"
+
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert').style.display = 'none';
+        })
+            
+        function 아이디알림창(text,condition){
+            document.getElementById('title').innerHTML = text
+            document.getElementById('alert').style.display = condition
+        }
+
+
+        function 알림창닫기(dis){
+            document.getElementById(`alert`).style.display=dis;
+        }
+
+    </script>
+</body>
+</html>
